@@ -1,3 +1,14 @@
+# a Binary Search Tree (BST) contains multiple nodes, 
+# each node contains data and 2 successors (left & right) nodes
+#
+# BST format:
+#
+#   Node (root)
+#   /  \
+# Node Node
+#      /  \
+#   Node  Node (leaf)
+#
 class Node
   attr_accessor :data, :left, :right
   def initialize(data)
@@ -8,6 +19,10 @@ end
 
 class Tree
   attr_accessor :root
+
+  def initialize(data)
+    @root = Node.new(data)
+  end
 
   def self.subtree?(root1, root2)
     if root2.nil? # a nil node is obviously subtree of any tree
