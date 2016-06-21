@@ -4,8 +4,7 @@ require 'test/unit'
 class TreeTest < Test::Unit::TestCase
   def setup
     #tree 1
-    @tree1 = Tree.new
-    @tree1.root = Node.new(1)
+    @tree1 = Tree.new(1)
     @tree1.root.left = Node.new(2)
     @tree1.root.right = Node.new(3)
 
@@ -16,8 +15,7 @@ class TreeTest < Test::Unit::TestCase
     @tree1.root.right.right.right = Node.new(7)
 
     #tree 2
-    @tree2 = Tree.new
-    @tree2.root = Node.new(-1)
+    @tree2 = Tree.new(-1)
     @tree2.root.left = Node.new(-2)
     @tree2.root.right = Node.new(-3)
   end
